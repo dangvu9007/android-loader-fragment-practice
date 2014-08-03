@@ -1,8 +1,8 @@
 package com.zlargon.loader1lab;
 
-import android.app.ListFragment;
 import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
+import android.support.v4.app.ListFragment;
 import android.widget.SimpleCursorAdapter;
 
 public class LoaderFragment extends ListFragment {
@@ -34,8 +34,7 @@ public class LoaderFragment extends ListFragment {
             new int[] {
                 android.R.id.text1,
                 android.R.id.text2
-            },
-            0
+            }
           );
 
         setListAdapter(this.cursorAdapter);

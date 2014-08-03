@@ -1,12 +1,12 @@
 package com.zlargon.loader1lab;
 
-import android.app.LoaderManager.LoaderCallbacks;
-import android.content.CursorLoader;
-import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
+import android.support.v4.app.LoaderManager.LoaderCallbacks;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.util.Log;
 
 public class MyLoaderCallbacks implements LoaderCallbacks<Cursor> {
@@ -59,7 +59,7 @@ public class MyLoaderCallbacks implements LoaderCallbacks<Cursor> {
     public void onLoadFinished(Loader<Cursor> loader, Cursor cur) {
         Log.e(TAG, "Finish Loading ...");
 
-        loaderFragment.getCursorAdapter().swapCursor(cur);
+        loaderFragment.getCursorAdapter().changeCursor(cur);
 
         if (cur.moveToFirst()) {
             String name;
